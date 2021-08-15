@@ -30,16 +30,78 @@
 </header>
 
 <body>
-    <div>
-        <h4>Dados Pessoais</h4>
-    </div>
+
     <section id="container">
-        <label>Nome</label>
-        <input type="text" id="nome" placeholder="Digite seu nome completo"/>
-        <label>Cargo Pretendido</label>
-        <input id= "cargo" type="text"/>
         <div>
-            <label>Data de Nascimento</label>
+            <h2>Dados Pessoais</h2>
+        </div>
+        <label>Nome Completo *</label>
+        <input type="text" id="nome" placeholder="Digite seu nome completo" />
+        <label>Cargo Pretendido</label>
+        <input id="cargo" type="text" />
+        <div>
+            <div><label>Data de Nascimento *</label> </div>
+            <label>Dia</label>
+            <input type="number" min="1" max="31" />
+            <label>Mês</label>
+            <input type="number" min="1" max="12" />
+            <label>Ano</label>
+            <input type="number" min="1900" max="2002">
+
+            <label>Estado Civil</label>
+            <input placceholder="Seu estado Civil" id="estadoCivil" list="estadosCivis" />
+            <datalist id="estadosCivis">
+                <option value="Solteiro(a)"></option>
+                <option value="Casado(a)"></option>
+                <option value="Divorciado(a)"></option>
+                <option value="Viúvo(a)"></option>
+            </datalist>
+
+            <div>
+                <div>
+                    <label>Endereço</label>
+                    <input type="text" id="endereco">
+                </div>
+                <div>
+                    <label>Bairro</label>
+                    <input type="text" id="bairro">
+                    <label>Cidade</label id="cidade">
+                    <input type="text">
+                </div>
+            </div>
+            <div>
+                <label>CEP</label>
+                <input placeholder="Apenas números" type="number">
+                <label>Telefone Fixo</label>
+                <input placeholder="Apenas números" type="number" id="telefone">
+                <label>Celular</label>
+                <input placeholder="Apenas números" type="number" id="celular">
+            </div>
+        </div>
+        <div>
+            <h2>Documentos</h2>
+            <div>
+                <label>Identidade</label>
+                <input type="number">
+
+                <label>CPF</label>
+                <input type="number" id="cpf">
+
+                <label>Possui Veículo</label>
+                <input type="text" id="veiculo" list="possuiveiculo">
+                <datalist id="possuiveiculo">
+                    <option value="SIM"></option>
+                    <option value="NÃO"></option>
+                </datalist>
+
+                <label >Habilitação</label>
+                <input type="text"id="habilitacao" list="categoriasHabilitacao">
+                <datalist id="categoriasHabilitacao">
+                    <option value="A"></option>
+                    <option value="B"></option>
+                    <option value="AB"></option>
+                </datalist>
+            </div>
         </div>
     </section>
     </section>
