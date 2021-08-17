@@ -40,22 +40,71 @@
         <label>Cargo Pretendido</label>
         <input id="cargo" type="text" />
         <div>
-            <div><label>Data de Nascimento *</label> </div>
-            <label>Dia</label>
-            <input type="number" min="1" max="31" />
-            <label>Mês</label>
-            <input type="number" min="1" max="12" />
-            <label>Ano</label>
-            <input type="number" min="1900" max="2002">
 
-            <label>Estado Civil</label>
-            <input placceholder="Seu estado Civil" id="estadoCivil" list="estadosCivis" />
-            <datalist id="estadosCivis">
-                <option value="Solteiro(a)"></option>
-                <option value="Casado(a)"></option>
-                <option value="Divorciado(a)"></option>
-                <option value="Viúvo(a)"></option>
-            </datalist>
+            <label for="dia">Dia</label>
+            <select name="dia" id="dia">
+                <option value=" "> </option>
+                <option value="">01</option>
+                <option value="">02</option>
+                <option value="">03</option>
+                <option value="">04</option>
+                <option value="">05</option>
+                <option value="">06</option>
+                <option value="">07</option>
+                <option value="">08</option>
+                <option value="">09</option>
+                <option value="">10</option>
+                <option value="">11</option>
+                <option value="">12</option>
+                <option value="">13</option>
+                <option value="">14</option>
+                <option value="">15</option>
+                <option value="">16</option>
+                <option value="">17</option>
+                <option value="">18</option>
+                <option value="">19</option>
+                <option value="">20</option>
+                <option value="">21</option>
+                <option value="">22</option>
+                <option value="">23</option>
+                <option value="">24</option>
+                <option value="">25</option>
+                <option value="">26</option>
+                <option value="">27</option>
+                <option value="">28</option>
+                <option value="">29</option>
+                <option value="">30</option>
+                <option value="">31</option>
+            </select>
+
+            <label for="mes">Mês</label>
+            <select name="mes" id="mes">
+                <option value=" "> </option>
+                <option value="Janeiro">Janeiro</option>
+                <option value="Fevereiro">Fevereiro</option>
+                <option value="Março">Março</option>
+                <option value="Abril">Abril</option>
+                <option value="Maio">Maio</option>
+                <option value="Junho">Junho</option>
+                <option value="Julho">Julho</option>
+                <option value="Agosto">Agosto</option>
+                <option value="Setembro">Setembro</option>
+                <option value="Outubro">Outubro</option>
+                <option value="Novembro">Novembro</option>
+                <option value="Dezembro">Dezembro</option>
+            </select>
+
+            <label for="ano">Ano</label>
+            <input id="ano" type="number" min="1910" max="2002">
+
+            <label for="estadoCivil">Estado Civil</label>
+            <select id="estadoCivil">
+                <option value="Selecionar">Selecionar</option>
+                <option value="Solteiro(a)">Solteiro(a)</option>
+                <option value="Casado(a)">Casado(a)</option>
+                <option value="Divorciado(a)">Divorciado(a)</option>
+                <option value="Viúvo(a)">Viúvo(a)</option>
+            </select>
 
             <div>
                 <div>
@@ -73,7 +122,7 @@
                 <label>CEP</label>
                 <input placeholder="Apenas números" type="number">
                 <label>Telefone Fixo</label>
-                <input placeholder="Apenas números" type="number" id="telefone">
+                <input placeholder="Apenas números" type="number"  id="telefone">
                 <label>Celular</label>
                 <input placeholder="Apenas números" type="number" id="celular">
             </div>
@@ -94,8 +143,8 @@
                     <option value="NÃO"></option>
                 </datalist>
 
-                <label >Habilitação</label>
-                <input type="text"id="habilitacao" list="categoriasHabilitacao">
+                <label>Habilitação</label>
+                <input type="text" id="habilitacao" list="categoriasHabilitacao">
                 <datalist id="categoriasHabilitacao">
                     <option value="A"></option>
                     <option value="B"></option>
