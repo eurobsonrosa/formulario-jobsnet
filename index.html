@@ -1,11 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
+<link rel="stylesheet" href="style.css">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulário JobsNET</title>
+
 </head>
 <header>
     <div>
@@ -122,7 +124,7 @@
                 <label>CEP</label>
                 <input placeholder="Apenas números" type="number">
                 <label>Telefone Fixo</label>
-                <input placeholder="Apenas números" type="number"  id="telefone">
+                <input placeholder="Apenas números" type="number" id="telefone">
                 <label>Celular</label>
                 <input placeholder="Apenas números" type="number" id="celular">
             </div>
@@ -136,24 +138,24 @@
                 <label>CPF</label>
                 <input type="number" id="cpf">
 
-                <label>Possui Veículo</label>
-                <input type="text" id="veiculo" list="possuiveiculo">
-                <datalist id="possuiveiculo">
-                    <option value="SIM"></option>
-                    <option value="NÃO"></option>
-                </datalist>
+                <label for="possuiveiculo">Possui Veículo</label>
+                <select id="possuiveiculo">
+                    <option value=" "> </option>
+                    <option value="SIM">SIM</option>
+                    <option value="NÃO">NÃO</option>
+                </select>
 
-                <label>Habilitação</label>
-                <input type="text" id="habilitacao" list="categoriasHabilitacao">
-                <datalist id="categoriasHabilitacao">
-                    <option value="A"></option>
-                    <option value="B"></option>
-                    <option value="AB"></option>
-                </datalist>
+                <label for="categoriaHabilitacao">Habilitação</label>
+                <select id="categoriasHabilitacao">
+                    <option value=" "></option>
+                    <option value="Sem">Nenhuma</option>
+                    <option value="A">A</option>
+                    <option value="B">B</option>
+                    <option value="AB">AB</option>
+                </select>
             </div>
         </div>
-    </section>
-    </section>
+        <div><button id="enviar" onclick="">ENVIAR</button></div>
     </section>
 </body>
 <footer>Desenvolvido durante o Start Tech da Gama Academy</footer>
