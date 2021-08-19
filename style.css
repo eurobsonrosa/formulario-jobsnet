@@ -1,0 +1,145 @@
+* { 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #000;
+    font-family: 'Noto Sans JP', sans-serif;
+     
+}
+
+form{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+header {
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+    align-items: center;
+    background: linear-gradient(90deg, rgb(240, 236, 236) 0%,#da852d 100% );
+    border-bottom:1px solid black;
+}
+
+header ul {
+    display: flex;
+}
+
+header ul li {
+    padding: 5px;
+}
+
+ul {
+    list-style: none;
+    font: size 35px;
+}
+
+a {
+    text-decoration: none;
+}
+
+header ul li a {
+    transition: 400ms;
+}
+
+header ul li a:hover {
+    color: #FFF;
+    text-decoration: underline;
+}
+
+h2 {
+    margin-top: 10px;
+    border-bottom: 1px solid;
+}
+    
+div {
+    padding: 3px;
+}
+    
+label {
+    font-size: 13px;
+}
+
+#container {
+    display: flex;
+    align-items: center; 
+    flex-direction: column;
+}
+
+.bloco {
+width: 50%;
+display: flex;
+justify-content: space-between;
+}
+
+.preenchimentoObrigatorio{
+    color: red;
+}
+
+#DataNascimento select{
+    padding: 0px 5px;
+}
+#cep, #telefone, #celular{
+    width: 120px;    
+}
+
+#nome, #endereco, #email {
+width: 300px;
+}
+
+#categoriasHabilitacao, #possuiveiculo, #numResidencia {
+    width: 90px;
+}
+
+#identidade, #cpf {
+    width: 120px;
+}
+
+#container button {
+    width: 10rem;
+    padding: 5px;
+    margin-top: 10px;
+    background: linear-gradient(to right, #631463 50%, black 50%);
+    background-size: 200% 100%;
+    background-position: right bottom;
+    color:#FFF;
+    border: none;
+    cursor: pointer;
+    transition: all 300ms ease-out;
+    border-radius: 5px 5px 5px 5px;
+    margin-left: -5px;
+    margin-top: 15px;
+}
+
+#container button:hover{
+    background-position: left bottom;
+}
+
+footer{
+    
+    border-top: 1px solid;
+    margin-top: 25px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    background-color: #631463;
+}
+
+footer p {
+    color: #FFF;
+}
+
+footer p a {
+    transition: 400ms;
+    color: #FFF;
+}
+
+footer p a:hover{
+    color:#da852d;
+    text-decoration: underline;
+}
+
