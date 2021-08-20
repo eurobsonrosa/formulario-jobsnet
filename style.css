@@ -30,12 +30,17 @@ header ul {
 
 header ul li {
     padding: 5px;
+    padding: 0.3125rem;
+}
+
+h1 {
+    font-size: 32px;
+    font-size: 2rem;
 }
 
 ul {
     list-style: none;
-    font: size 35px;
-}
+ }
 
 a {
     text-decoration: none;
@@ -52,7 +57,9 @@ header ul li a:hover {
 
 h2 {
     margin-top: 10px;
+    margin-top: 0.625rem;
     border-bottom: 1px solid;
+    
 }
     
 div {
@@ -61,6 +68,7 @@ div {
     
 label {
     font-size: 13px;
+    font-size: 0.8125rem;    
 }
 
 #container {
@@ -70,7 +78,7 @@ label {
 }
 
 .bloco {
-width: 50%;
+width: 45%;
 display: flex;
 justify-content: space-between;
 }
@@ -82,20 +90,21 @@ justify-content: space-between;
 #DataNascimento select{
     padding: 0px 5px;
 }
-#cep, #telefone, #celular{
-    width: 120px;    
+#cep, #telefone, #celular,
+#identidade, #cpf{
+    width: 7.5rem;    
 }
 
 #nome, #endereco, #email {
-width: 300px;
+width: 18.75rem;
 }
 
-#categoriasHabilitacao, #possuiveiculo, #numResidencia {
-    width: 90px;
+#categoriasHabilitacao, #possuiveiculo {
+    width: 5.625rem;
 }
 
-#identidade, #cpf {
-    width: 120px;
+#numResidencia {
+    width: 3rem;
 }
 
 #container button {
@@ -141,5 +150,43 @@ footer p a {
 footer p a:hover{
     color:#da852d;
     text-decoration: underline;
+}
+
+@media only screen and (max-width: 820px) {
+    header {
+        flex-direction: column; 
+    }
+
+   .bloco {
+        width: 70%;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        
+    }
+
+}
+
+@media only screen and (max-width: 480px) {
+
+    header {
+        flex-direction: column;
+        align-content: center;
+        text-align: center;
+    }
+
+    #container {
+        align-items: center;
+    }
+
+    h1 {
+        font-size: 1.25rem;
+    }
+    .bloco {
+        width: 95%;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+    }
+
+
 }
 

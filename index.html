@@ -44,7 +44,7 @@
     <div class="bloco">
         <div>
             <label>Nome Completo </label><span class="preenchimentoObrigatorio">*</span><br>
-            <input type="text" id="nome" placeholder="Digite seu nome completo" />
+            <input type="text" id="nome" placeholder="Digite seu nome completo" required/>
         </div>
         <div>
             <label>Cargo Pretendido</label><br>
@@ -52,10 +52,10 @@
         </div>
     </div>
     <div class="bloco">
-        <div id="DataNascimento">
+        <div id="dataNascimento">
             <label for="DataNascimento">Data de Nascimento </label><span class="preenchimentoObrigatorio">*</span><br>
 
-            <select name="dia" id="dia">
+            <select name="dia" id="dia" required>
                 <option value="DIA">DIA</option>
                 <option value="">01</option>
                 <option value="">02</option>
@@ -90,7 +90,7 @@
                 <option value="">31</option>
             </select>
 
-            <select name="mes" id="mes">
+            <select name="mes" id="mes" required>
                 <option value="MES">MES</option>
                 <option value="Janeiro">Janeiro</option>
                 <option value="Fevereiro">Fevereiro</option>
@@ -106,7 +106,7 @@
                 <option value="Dezembro">Dezembro</option>
             </select>
 
-            <select name="ano" id="ano">
+            <select name="ano" id="ano" required>
                 <option value="ANO">ANO</option>
                 <option value="1940">1940</option>
                 <option value="1941">1941</option>
@@ -185,20 +185,30 @@
                 <option value="Viúvo(a)">Viúvo(a)</option>
             </select>
         </div>
+        <div>
+            <label for="genero">Gênero</label><br>
+            <select name="genero" id="genero">
+                <option value=""></option>
+                <option value="Masculino">Masculino</option>
+                <option value="Feminino">Feminino</option>
+                <option value="Outro">Outro</option>
+                <option value="Prefiro não informar">Prefiro não informar</option>
+            </select>
+        </div>
     </div>
 
     <div class="bloco">
         <div>
             <label>CEP </label><span class="preenchimentoObrigatorio">*</span><br>
-            <input id="cep" maxlength="8" type="number">
+            <input id="cep" maxlength="8" type="number" required>
         </div>
         <div>
             <label>Endereço</label><br>
             <input type="text" id="endereco">
         </div>
         <div>
-            <label for="numResidencia">Número</label><br>
-            <input type="text" id="numResidencia">
+            <label for="numResidencia">Num </label><span class="preenchimentoObrigatorio">*</span><br>
+            <input type="text" id="numResidencia" required>
         </div>
     </div>
 
@@ -227,8 +237,8 @@
             <input placeholder="Apenas números" maxlength="11" id="celular">
         </div>
         <div>
-            <label for="email">Email</label><br>
-            <input type="email" id="email">
+            <label for="email">Email</label><span class="preenchimentoObrigatorio">*</span><br>
+            <input type="email" id="email" required>
         </div>
     </div>
 
@@ -236,11 +246,11 @@
     <div class="bloco">
         <div>
             <label>Identidade </label><span class="preenchimentoObrigatorio">*</span><br>
-            <input type="number" id="identidade">
+            <input type="number" id="identidade" required>
         </div>
         <div>
             <label>CPF </label><span class="preenchimentoObrigatorio">*</span><br>
-            <input type="number" maxlength="11" id="cpf">
+            <input type="number" maxlength="11" id="cpf" required>
         </div>
         <div>
             <label for="possuiveiculo">Possui Veículo</label><br>
