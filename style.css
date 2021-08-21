@@ -87,6 +87,10 @@ justify-content: space-between;
     color: red;
 }
 
+#cpf {
+-moz-text-decoration-style: none;
+}
+
 #DataNascimento select{
     padding: 0px 5px;
 }
@@ -152,6 +156,12 @@ footer p a:hover{
     text-decoration: underline;
 }
 
+
+span {
+    font-size: 0.75rem;
+    color: red;
+}
+
 @media only screen and (max-width: 820px) {
     header {
         flex-direction: column; 
@@ -188,5 +198,11 @@ footer p a:hover{
     }
 
 
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
 }
 

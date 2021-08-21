@@ -44,7 +44,7 @@
     <div class="bloco">
         <div>
             <label>Nome Completo </label><span class="preenchimentoObrigatorio">*</span><br>
-            <input type="text" id="nome" placeholder="Digite seu nome completo" required/>
+            <input type="text" id="nome" class="invalidInput" placeholder="Digite seu nome completo" required />
         </div>
         <div>
             <label>Cargo Pretendido</label><br>
@@ -52,11 +52,11 @@
         </div>
     </div>
     <div class="bloco">
-        <div id="dataNascimento">
+        <div id="dataNascimento" class="invalidInput">
             <label for="DataNascimento">Data de Nascimento </label><span class="preenchimentoObrigatorio">*</span><br>
-
+            <small>Dia</small>
             <select name="dia" id="dia" required>
-                <option value="DIA">DIA</option>
+                <option value=""></option>
                 <option value="">01</option>
                 <option value="">02</option>
                 <option value="">03</option>
@@ -90,8 +90,9 @@
                 <option value="">31</option>
             </select>
 
+            <small>Mês</small>
             <select name="mes" id="mes" required>
-                <option value="MES">MES</option>
+                <option value=""></option>
                 <option value="Janeiro">Janeiro</option>
                 <option value="Fevereiro">Fevereiro</option>
                 <option value="Março">Março</option>
@@ -106,8 +107,9 @@
                 <option value="Dezembro">Dezembro</option>
             </select>
 
+            <small>Ano</small>
             <select name="ano" id="ano" required>
-                <option value="ANO">ANO</option>
+                <option value=""></option>
                 <option value="1940">1940</option>
                 <option value="1941">1941</option>
                 <option value="1942">1942</option>
@@ -173,7 +175,9 @@
                 <option value="2002">2002</option>
                 <option value="2003">2003</option>
 
-            </select>
+            </select><br>
+            <span id="erroNascimento" style="display: none;">Preencher Campo</span>
+
         </div>
         <div>
             <label for="estadoCivil">Estado Civil</label><br>
@@ -198,9 +202,10 @@
     </div>
 
     <div class="bloco">
-        <div>
+        <div id="erroBlocoCEP">
             <label>CEP </label><span class="preenchimentoObrigatorio">*</span><br>
-            <input id="cep" maxlength="8" type="number" required>
+            <input id="cep" maxlength="8" class="invalidInput" required><br>
+            <span id="erroCEP" style="display: none;" role="alert">CEP inválido</span>
         </div>
         <div>
             <label>Endereço</label><br>
@@ -236,21 +241,24 @@
             <label>Celular</label><br>
             <input placeholder="Apenas números" maxlength="11" id="celular">
         </div>
-        <div>
+        <div id="erroBlocoEmail">
             <label for="email">Email</label><span class="preenchimentoObrigatorio">*</span><br>
-            <input type="email" id="email" required>
+            <input type="email" name="email" id="email" required><br>
+            <span id="erroEmail" style="display: none;">Email inválido</span>
         </div>
     </div>
 
     <h2>Documentos</h2>
     <div class="bloco">
-        <div>
+        <div id="erroBlocoId">
             <label>Identidade </label><span class="preenchimentoObrigatorio">*</span><br>
-            <input type="number" id="identidade" required>
+            <input type="number" class="invalidInput" id="identidade" required><br>
+            <span id="erroId" style="display: none;">Preencher Campo</span>
         </div>
-        <div>
+        <div id="erroBlocoCPF">
             <label>CPF </label><span class="preenchimentoObrigatorio">*</span><br>
-            <input type="number" maxlength="11" id="cpf" required>
+            <input type="number" maxlength="11" class="invalidInput" id="cpf" required><br>
+            <span id="erroCPF" style="display: none;" role="alert">CPF Inválido</span>
         </div>
         <div>
             <label for="possuiveiculo">Possui Veículo</label><br>
@@ -271,11 +279,13 @@
             </select>
         </div>
     </div>
-    <div><button type="submit" id="enviar" onclick="">ENVIAR</button></div>
+    <div><button type="submit" id="enviar" onclick="validacoes()">ENVIAR</button></div>
 </form>
 
 <footer>
     <p>Desenvolvido por <a href="https://www.linkedin.com/in/robsonrosajr/" id="linkedin"> Robson Rosa </a> durante o
         Start Tech da Gama Academy</p>
 </footer>
+<script src="./script.js"></script>
+
 </html>
