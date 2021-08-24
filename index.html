@@ -204,12 +204,12 @@
     <div class="bloco">
         <div id="erroBlocoCEP">
             <label>CEP </label><span class="preenchimentoObrigatorio">*</span><br>
-            <input name="cep" id="cep" maxlength="8" class="invalidInput" required><br>
+            <input name="cep" id="cep" type="number" min="8" placeholder="apenas números" class="invalidInput" required><br>
             <span id="erroCEP" style="display: none;" role="alert">CEP inválido</span>
         </div>
         <div>
             <label>Endereço</label><br>
-            <input type="text" name="endereco" id="endereco">
+            <input type="text" name="endereco" id="endereco" required>
         </div>
         <div>
             <label for="numResidencia">Num </label><span class="preenchimentoObrigatorio">*</span><br>
@@ -220,15 +220,15 @@
     <div class="bloco">
         <div>
             <label>Bairro</label><br>
-            <input type="text" name="bairro" id="bairro"><br>
+            <input type="text" name="bairro" id="bairro" required><br>
         </div>
         <div>
             <label>Cidade</label id="cidade"><br>
-            <input name="cidade" type="text">
+            <input name="cidade" id="cidade" type="text" required>
         </div>
         <div>
             <label for="estado">Estado</label><br>
-            <input type="text" name="estado" id="estado">
+            <input type="text" name="estado" id="estado" required>
         </div>
     </div>
 
@@ -239,7 +239,7 @@
         </div>
         <div>
             <label>Celular</label><br>
-            <input placeholder="Apenas números" maxlength="11" name="celular" id="celular">
+            <input placeholder="Apenas números" maxlength="11" name="celular" id="celular" required>
         </div>
         <div id="erroBlocoEmail">
             <label for="email">Email</label><span class="preenchimentoObrigatorio">*</span><br>
