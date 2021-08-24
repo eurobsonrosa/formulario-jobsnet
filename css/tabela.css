@@ -1,0 +1,44 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Noto Sans JP', sans-serif;
+    text-align: center;
+    font-size: 12px;
+}
+
+body {
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(219, 219, 233);
+}
+
+.container {
+    border: 0.5px solid black;
+    border-radius:  5px;
+    box-shadow: 0 0 5px 0.3px black;
+    padding: 2rem;
+    background: wheat;
+}
+
+caption {
+    font-weight: bold;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+thead{
+    background: #b1aeae;
+}
+
+tbody tr:nth-child(2n){
+    background-color: rgb(224, 222, 219);
+}
+
+tbody tr:hover{
+    background-color: rgb(57, 57, 59);
+    color: white;
+    cursor: pointer;
+}

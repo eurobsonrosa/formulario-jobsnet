@@ -1,3 +1,5 @@
+import axios from 'axios';
+
 function validarCEP() {
     let cep = document.getElementById('cep').value;
     console.log(`CEP: ${cep}`)
@@ -8,10 +10,11 @@ function validarCEP() {
     if (!cep) {
         document.getElementById('erroCEP').style.display = 'block';
         document.getElementById('erroBlocoCEP').style.border = '.1875rem solid red';
+        return false;
+    } else {
+        return true;
     }
 }
-
-console.log('JavaScript carregado!');
 
 function validaCPF(cpf) {
     console.log(cpf.length);
@@ -59,9 +62,11 @@ function validacaoCPF() {
     if (!resultadoValidacao) {
         document.getElementById('erroCPF').style.display = 'block';
         document.getElementById('erroBlocoCPF').style.border = '.1875rem solid red';
+        return false;
     } else {
         document.getElementById('erroCPF').style.display = 'none';
         document.getElementById('erroBlocoCPF').style.border = 'none';
+        return true;
     }
 }
 
@@ -70,10 +75,11 @@ function validacaoEmail() {
     if (!email) {
         document.getElementById('erroEmail').style.display = 'block';
         document.getElementById('erroBlocoEmail').style.border = '.1875rem solid red';
+        return false;
     } else {
         document.getElementById('erroEmail').style.display = 'none';
         document.getElementById('erroBlocoEmail').style.border = 'none';
-
+        return true;
     }
 }
 
@@ -82,28 +88,42 @@ function validacaoIdentidade() {
     if (!id) {
         document.getElementById('erroId').style.display = 'block';
         document.getElementById('erroBlocoId').style.border = '.1875rem solid red';
+        return false;
     } else {
         document.getElementById('erroId').style.display = 'none';
         document.getElementById('erroBlocoId').style.border = 'none';
-
+        return true;
     }
 }
 
 function validacaoNascimento() {
-    
+
     let dia = document.getElementById('dia');
     let mes = document.getElementById('mes');
     let ano = document.getElementById('ano');
     let aux = dia.options[dia.selectedIndex].text;
     let aux2 = mes.options[mes.selectedIndex].text;
     let aux3 = ano.options[ano.selectedIndex].text;
-    if (!aux || !aux2 || !aux3 ) {
+    if (!aux || !aux2 || !aux3) {
         document.getElementById('erroNascimento').style.display = 'block';
         document.getElementById('dataNascimento').style.border = '.1875rem solid red';
+        return false;
     } else {
         document.getElementById('erroNascimento').style.display = 'none';
         document.getElementById('dataNascimento').style.border = 'none';
+        return true;
     }
+}
+
+function check_form() {
+    var valid = true;
+
+    if (!validacaoCPF() || !validarCEP()) { valid = false; }
+
+    if (!valid) {
+        alert('Por favor preencha todos os campos corretamente.');
+        return false;
+    } else { return true; }
 }
 
 function validacoes() {
@@ -113,3 +133,4 @@ function validacoes() {
     validacaoNascimento();
     validacaoIdentidade();
 }
+
