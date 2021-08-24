@@ -103,6 +103,7 @@ const validaCEP = (cep) => cep.toString().length == 8;
 
 const buscaCEP = async () => {
     LimpaEndereco();
+    let validacao = true;
     const cep = document.getElementById('cep').value;
     const url = `https://viacep.com.br/ws/${cep}/json/`;
     if (validaCEP(cep)) {
@@ -111,15 +112,19 @@ const buscaCEP = async () => {
         if (endereco.hasOwnProperty('erro')) {
             document.getElementById('erroCEP').style.display = 'block';
             document.getElementById('erroBlocoCEP').style.border = '.1875rem solid red';
+            validacao = false;
         } else {
             document.getElementById('erroCEP').style.display = 'none';
             document.getElementById('erroBlocoCEP').style.border = 'none';
             completaEndereco(endereco);
+            validacao = true;
         }
     } else {
         document.getElementById('erroCEP').style.display = 'block';
         document.getElementById('erroBlocoCEP').style.border = '.1875rem solid red';
+        validacao = false;
     }
+    return validacao;
 }
 
 document.getElementById('cep').addEventListener('focusout', buscaCEP);

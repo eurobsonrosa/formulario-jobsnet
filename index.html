@@ -47,7 +47,7 @@
             <input type="text" name="nome" id="nome" class="invalidInput" placeholder="Digite seu nome completo" required />
         </div>
         <div>
-            <label>Cargo Pretendido</label><br>
+            <label>Cargo Pretendido </label><span class="preenchimentoObrigatorio">*</span><br>
             <input id="cargo" type="text" />
         </div>
     </div>
@@ -219,15 +219,15 @@
 
     <div class="bloco">
         <div>
-            <label>Bairro</label><br>
+            <label>Bairro </label><span class="preenchimentoObrigatorio">*</span><br>
             <input type="text" name="bairro" id="bairro" required><br>
         </div>
         <div>
-            <label>Cidade</label id="cidade"><br>
+            <label>Cidade </label id="cidade"><span class="preenchimentoObrigatorio">*</span><br>
             <input name="cidade" id="cidade" type="text" required>
         </div>
         <div>
-            <label for="estado">Estado</label><br>
+            <label for="estado">Estado </label><span class="preenchimentoObrigatorio">*</span><br>
             <input type="text" name="estado" id="estado" required>
         </div>
     </div>
@@ -238,7 +238,7 @@
             <input placeholder="Apenas números" maxlength="10" name="telefone" id="telefone">
         </div>
         <div>
-            <label>Celular</label><br>
+            <label>Celular </label><span class="preenchimentoObrigatorio">*</span><br>
             <input placeholder="Apenas números" maxlength="11" name="celular" id="celular" required>
         </div>
         <div id="erroBlocoEmail">
@@ -279,7 +279,7 @@
             </select>
         </div>
     </div>
-    <div><button type="submit" id="enviar" onclick="validacoes()">ENVIAR</button></div>
+    <div><button type="submit" id="enviar" onclick="check_form()">ENVIAR</button></div>
 </form>
 
 <footer>
