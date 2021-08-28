@@ -1,38 +1,23 @@
 const express = require('express');
+
+const mongoose = require('mongoose');
+require('dotenv').config();
+const swaggerUI = require('swagger-ui-express');
+const swaggerDocs = require('./swagger.json');
+const routes = require('./routes');
+const cors =  require('cors');
+
 const app = express();
-const bodyParser = require('body-parser');
-const fs = require('fs');
 
-app.use(bodyParser.urlencoded({extended:true}));
-
-console.log('conectado');
-
-fs.access('../data/items.json', fs.constants.F_OK, (err) => {
-    console.log(err ? 'Arquivo items.json não existe' : '');
-});
-
-
-const readFile = () => {
-    const atual = fs.readFileSync('../data/items.json', 'utf-8');
-    return atual == '' ? [] : JSON.parse(atual);
-}
-
-const writeFile = (arrayElemet) => {
-    const currentData = readFile();
-    currentData.push(arrayElemet);
-    const updateFile = JSON.stringify(currentData);
-    fs.writeFileSync('../data/items.json', updateFile,'utf-8')
-}
-
-app.post('/',(req, resp) => {
-    
-    writeFile(req.body);
-    console.log(req.body);
-    resp.send('<h1>Parabéns</h1>');  
-});
-  
-app.get('/getAtributes', (req,resp)=>{
-    resp.send(readFile()); 
+mongoose.connect(`mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@candidatos.rybbm.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true
 })
 
-app.listen(3000);
+app.use(express.json());
+app.use(cors());
+app.use('/docs', swaggerUI.serve, swaggerUI.setup(swaggerDocs));
+app.use(routes);
+app.listen('5000', () => {
+    console.log('conectado na porta 5000');
+});

@@ -1,0 +1,121 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "API do Formulário JobsNet",
+        "description": "API desenvolvida durante o Start Tech da Gama Academy",
+        "version": "0.0.1"
+    },
+    "servers": [
+        {
+            "url": "http://localhost:5000",
+            "description": "ambiente de densenvolvimento"
+        }
+    ],
+    "paths": {
+        "/registro": {
+            "post": {
+                "summary": "Cadastro do candidato",
+                "description": "Área de cadastro do candidato onde recebe os dados preenchidos",
+                "tags": [
+                    "candidato"
+                ],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "properties": {
+                                    "nome": {
+                                        "type": "string"
+                                    },
+                                    "cargo": {
+                                        "type": "string"
+                                    },
+                                    "dia": {
+                                        "type": "number"
+                                    },
+                                    "mes": {
+                                        "type": "string"
+                                    },
+                                    "ano": {
+                                        "type": "number"
+                                    },
+                                    "estadoCivil": {
+                                        "type": "string"
+                                    },
+                                    "genero": {
+                                        "type": "string"
+                                    },
+                                    "cep": {
+                                        "type": "number"
+                                    },
+                                    "endereco": {
+                                        "type": "string"
+                                    },
+                                    "numResidencia": {
+                                        "type": "number"
+                                    },
+                                    "bairro": {
+                                        "type": "string"
+                                    },
+                                    "cidade": {
+                                        "type": "string"
+                                    },
+                                    "estado": {
+                                        "type": "string"
+                                    },
+                                    "telefone": {
+                                        "type": "number"
+                                    },
+                                    "celular": {
+                                        "type": "number"
+                                    },
+                                    "email": {
+                                        "type": "string"
+                                    },
+                                    "identidade": {
+                                        "type": "number"
+                                    },
+                                    "cpf": {
+                                        "type": "number"
+                                    },
+                                    "possuiveiculo": {
+                                        "type": "string"
+                                    },
+                                    "categoriaHabilitacao": {
+                                        "type": "string"
+                                    }
+                                }
+                            },
+                            "examples": {
+                                "Meu Cadastro": {
+                                    "value": {
+                                        "nome": "Robson Rosa",
+                                        "cargo": "Fullstack Dev",
+                                        "dia": "30",
+                                        "mes": "Março",
+                                        "ano": "1994",
+                                        "estadoCivil": "Solteiro",
+                                        "genero": "Masculino",
+                                        "cep": "10000000",
+                                        "endereco": "Rua Ficticia",
+                                        "numResidencia": "137",
+                                        "bairro": "Imaginaria",
+                                        "cidade": "Salvador",
+                                        "estado": "BA",
+                                        "telefone": "7133333333",
+                                        "celular": "71988888888",
+                                        "email": "contatorobsonrosa@gmail.com",
+                                        "identidade": "1111111111",
+                                        "cpf": "10000000000",
+                                        "possuiveiculo": "Não",
+                                        "categoriaHabilitacao": "AB"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
