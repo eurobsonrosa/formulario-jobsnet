@@ -71,7 +71,7 @@ label {
     font-size: 0.8125rem;    
 }
 
-#container, #botaoExterno {
+#container {
     display: flex;
     align-items: center; 
     flex-direction: column;
