@@ -71,7 +71,7 @@ label {
     font-size: 0.8125rem;    
 }
 
-#container {
+#container, #botaoExterno {
     display: flex;
     align-items: center; 
     flex-direction: column;
@@ -87,9 +87,7 @@ justify-content: space-between;
     color: red;
 }
 
-#cpf {
--moz-text-decoration-style: none;
-}
+
 
 #DataNascimento select{
     padding: 0px 5px;
@@ -111,7 +109,7 @@ width: 18.75rem;
     width: 3rem;
 }
 
-#container button {
+button {
     width: 10rem;
     padding: 5px;
     margin-top: 10px;
@@ -127,7 +125,7 @@ width: 18.75rem;
     margin-top: 15px;
 }
 
-#container button:hover{
+button:hover{
     background-position: left bottom;
 }
 
