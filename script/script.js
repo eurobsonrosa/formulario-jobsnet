@@ -1,62 +1,63 @@
-// function validaCPF(cpf) {
-//     if (cpf.length != 11) {
-//         return false;
-//     } else {
-//         var numeros = cpf.substring(0, 9);
-//         var digitos = cpf.substring(9);
-//         var soma = 0
-//         for (var i = 10; i > 1; i--) {
-//             soma += numeros.charAt(10 - i) * i
-//         }
+function validaCPF(cpf) {
+    if (cpf.length != 11) {
+        return false;
+    } else {
+        var numeros = cpf.substring(0, 9);
+        var digitos = cpf.substring(9);
+        var soma = 0
+        for (var i = 10; i > 1; i--) {
+            soma += numeros.charAt(10 - i) * i
+        }
 
-//         var resultado = soma % 11 < 2 ? 0 : 11 - (soma % 11);
+        var resultado = soma % 11 < 2 ? 0 : 11 - (soma % 11);
 
-//         //validação do primeiro digito
-//         if (resultado != digitos.charAt(0)) {
-//             return false;
-//         }
+        //validação do primeiro digito
+        if (resultado != digitos.charAt(0)) {
+            return false;
+        }
 
-//         soma = 0;
-//         numeros = cpf.substring(0, 10);
+        soma = 0;
+        numeros = cpf.substring(0, 10);
 
-//         for (var k = 11; k > 1; k--) {
-//             soma += numeros.charAt(11 - k) * k;
-//         }
+        for (var k = 11; k > 1; k--) {
+            soma += numeros.charAt(11 - k) * k;
+        }
 
-//         resultado = soma % 11 < 2 ? 0 : 11 - (soma % 11);
+        resultado = soma % 11 < 2 ? 0 : 11 - (soma % 11);
 
-//         //validação segundo digito
-//         if (resultado != digitos.charAt(1)) {
-//             return false;
-//         }
+        //validação segundo digito
+        if (resultado != digitos.charAt(1)) {
+            return false;
+        }
 
-//         return true;
-//     }
-// }
+        return true;
+    }
+}
 
-// function validacaoCPF() {
-//     let cpf = document.getElementById('cpf').value;
+function validacaoCPF() {
+    let cpf = document.getElementById('cpf').value;
 
-//     let resultadoValidacao = validaCPF(cpf);
+    let resultadoValidacao = validaCPF(cpf);
 
-//     if (!resultadoValidacao) {
-//         document.getElementById('erroCPF').style.display = 'block';
-//         document.getElementById('erroBlocoCPF').style.border = '.1875rem solid red';
-//         return false;
-//     } else {
-//         document.getElementById('erroCPF').style.display = 'none';
-//         document.getElementById('erroBlocoCPF').style.border = 'none';
-//         return true;
-//     }
-// }
+    if (!resultadoValidacao) {
+        document.getElementById('erroCPF').style.display = 'block';
+        document.getElementById('erroBlocoCPF').style.border = '.1875rem solid red';
+        return false;
+    } else {
+        document.getElementById('erroCPF').style.display = 'none';
+        document.getElementById('erroBlocoCPF').style.border = 'none';
+        return true;
+    }
 
-// document.getElementById('cpf').addEventListener('focusout', validacaoCPF);
+}
+
+document.getElementById('cpf').addEventListener('focusout', validacaoCPF);
 
 const validaCEP = (cep) => cep.toString().length == 8;
 
 const buscaCEP = async () => {
     LimpaEndereco();
-    let validacao = true;
+    let validacao = false;
     const cep = document.getElementById('cep').value;
     const url = `https://viacep.com.br/ws/${cep}/json/`;
     if (validaCEP(cep)) {
@@ -124,32 +125,46 @@ const Formulario = () => {
 }
 
 const criarCandidato = async (candidato) => {
-    try {
-        const usuario = fetch('http://localhost:5000/registro', {
-            method: "POST",
-            headers: {
-                'Accept': 'application/json',
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(Formulario())
-        });
-        if (usuario.status === 200) {
-            alert('DEU CERTO')
-        }
-    } catch (error) {
-        alert('deu errado!');
+
+    const requisicao = await fetch('http://localhost:5000/registro', {
+        method: "POST",
+        headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(Formulario())
+    });
+    if (requisicao.status === 200) {
+        alert('CADASTRO CONCLUÍDO!');
+    }
+
+    if (requisicao.status === 500) {
+        alert('CPF OU EMAIL JÁ FOI CADASTRADO');
     }
 }
 
 function check_form() {
+    let nome = document.getElementById('nome').value;
+    let cargo = document.getElementById('cargo').value;
+    let dia = document.getElementById('dia').value;
+    let mes = document.getElementById('mes').value;
+    let ano = document.getElementById('ano').value;
+    let cep = document.getElementById('cep').value;
+    let endereco = document.getElementById('endereco').value;
+    let numResidencia = document.getElementById('numResidencia').value;
+    let bairro = document.getElementById('bairro').value;
+    let cidade = document.getElementById('cidade').value;
+    let estado = document.getElementById('estado').value;
+    let celular = document.getElementById('celular').value;
+    let email = document.getElementById('email').value.mata;
+    let identidade = document.getElementById('identidade').value;
 
-    var valid = true;
-    if (!validacaoCPF() || !buscaCEP()) { valid = false; }
-
-    if (!valid) {
+    if (nome == "" || cargo == "" || dia == "" || mes == "" || ano == "" || cep == "" || endereco == ""
+        || numResidencia == "" || bairro == "" || cidade == "" || estado == "" || celular == "" ||
+        email == false || identidade == "" || validacaoCPF() == false) {
         alert('Por favor, preencha todos os campos corretamente.');
-        return false;
     } else {
-        return true;
+        criarCandidato();
+        alert('verificando cadastro...');
     }
 }

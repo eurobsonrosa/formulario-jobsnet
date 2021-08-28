@@ -36,8 +36,8 @@
     </ul>
 </header>
 
-<form name="formulario" id="container" onchange="Formulario()">
-    <!-- method="POST" action="http://localhost:5000/registro onsubmit="return check_form()"" -->
+<form name="formulario" id="container">
+    <!-- onsubmit="return check_form()"" -->
 
     <h2 id="dadosPessoais">Dados Pessoais</h2>
 
@@ -45,18 +45,18 @@
         <div>
             <label>Nome Completo </label><span class="preenchimentoObrigatorio">*</span><br>
             <input type="text" name="nome" id="nome" class="invalidInput" placeholder="Digite seu nome completo"
-                required />
+                onchange="Formulario()" required/>
         </div>
         <div>
             <label>Cargo Pretendido </label><span class="preenchimentoObrigatorio">*</span><br>
-            <input id="cargo" type="text" />
+            <input id="cargo" type="text" onchange="Formulario()" required/>
         </div>
     </div>
     <div class="bloco">
         <div id="dataNascimento" class="invalidInput">
             <label for="DataNascimento">Data de Nascimento </label><span class="preenchimentoObrigatorio">*</span><br>
             <small>Dia</small>
-            <select name="dia" id="dia" required>
+            <select name="dia" id="dia" onchange="Formulario()" required>
                 <option value=""></option>
                 <option value="01">01</option>
                 <option value="02">02</option>
@@ -92,7 +92,7 @@
             </select>
 
             <small>Mês</small>
-            <select name="mes" id="mes" required>
+            <select name="mes" id="mes" onchange="Formulario()" required>
                 <option value=""></option>
                 <option value="Janeiro">Janeiro</option>
                 <option value="Fevereiro">Fevereiro</option>
@@ -109,7 +109,7 @@
             </select>
 
             <small>Ano</small>
-            <select name="ano" id="ano" required>
+            <select name="ano" id="ano" onchange="Formulario()" required>
                 <option value=""></option>
                 <option value="1940">1940</option>
                 <option value="1941">1941</option>
@@ -182,7 +182,7 @@
         </div>
         <div>
             <label for="estadoCivil">Estado Civil</label><br>
-            <select name"estadoCivil" id="estadoCivil">
+            <select name"estadoCivil" id="estadoCivil" onchange="Formulario()">
                 <option value="Selecionar">Selecionar</option>
                 <option value="Solteiro(a)">Solteiro(a)</option>
                 <option value="Casado(a)">Casado(a)</option>
@@ -192,7 +192,7 @@
         </div>
         <div>
             <label for="genero">Gênero</label><br>
-            <select name="genero" id="genero">
+            <select name="genero" id="genero" onchange="Formulario()">
                 <option value=""></option>
                 <option value="Masculino">Masculino</option>
                 <option value="Feminino">Feminino</option>
@@ -206,46 +206,47 @@
         <div id="erroBlocoCEP">
             <label>CEP </label><span class="preenchimentoObrigatorio">*</span><br>
             <input name="cep" id="cep" type="number" min="8" placeholder="apenas números" class="invalidInput"
-                required><br>
+                onchange="Formulario()" required><br>
             <span id="erroCEP" style="display: none;" role="alert">CEP inválido</span>
         </div>
         <div>
             <label>Endereço</label><br>
-            <input type="text" name="endereco" id="endereco" required>
+            <input type="text" name="endereco" id="endereco" onchange="Formulario()" required>
         </div>
         <div>
             <label for="numResidencia">Num </label><span class="preenchimentoObrigatorio">*</span><br>
-            <input type="text" id="numResidencia" name="numResidencia" required>
+            <input type="number" id="numResidencia" name="numResidencia" onchange="Formulario()" required>
         </div>
     </div>
 
     <div class="bloco">
         <div>
             <label>Bairro </label><span class="preenchimentoObrigatorio">*</span><br>
-            <input type="text" name="bairro" id="bairro" required><br>
+            <input type="text" name="bairro" id="bairro" onchange="Formulario()" required><br>
         </div>
         <div>
             <label>Cidade </label id="cidade"><span class="preenchimentoObrigatorio">*</span><br>
-            <input name="cidade" id="cidade" type="text" required>
+            <input name="cidade" id="cidade" type="text" onchange="Formulario()" required>
         </div>
         <div>
             <label for="estado">Estado </label><span class="preenchimentoObrigatorio">*</span><br>
-            <input type="text" name="estado" id="estado" required>
+            <input type="text" name="estado" id="estado" onchange="Formulario()" required>
         </div>
     </div>
 
     <div class="bloco">
         <div>
             <label>Telefone Fixo</label><br>
-            <input placeholder="Apenas números" maxlength="10" name="telefone" id="telefone">
+            <input placeholder="Apenas números" maxlength="10" name="telefone" id="telefone" onchange="Formulario()">
         </div>
         <div>
             <label>Celular </label><span class="preenchimentoObrigatorio">*</span><br>
-            <input placeholder="Apenas números" maxlength="11" name="celular" id="celular" required>
+            <input placeholder="Apenas números" maxlength="11" name="celular" id="celular" onchange="Formulario()"
+                required>
         </div>
         <div id="erroBlocoEmail">
             <label for="email">Email</label><span class="preenchimentoObrigatorio">*</span><br>
-            <input type="email" name="email" id="email" required><br>
+            <input type="email" name="email" id="email" onchange="Formulario()" required><br>
             <span id="erroEmail" style="display: none;">Email inválido</span>
         </div>
     </div>
@@ -254,17 +255,19 @@
     <div class="bloco">
         <div id="erroBlocoId">
             <label>Identidade </label><span class="preenchimentoObrigatorio">*</span><br>
-            <input type="number" class="invalidInput" name="identidade" id="identidade" required><br>
+            <input type="number" class="invalidInput" name="identidade" id="identidade" onchange="Formulario()"
+                required><br>
             <span id="erroId" style="display: none;">Preencher Campo</span>
         </div>
         <div id="erroBlocoCPF">
             <label>CPF </label><span class="preenchimentoObrigatorio">*</span><br>
-            <input type="number" maxlength="11" class="invalidInput" name="cpf" id="cpf" required><br>
+            <input type="number" maxlength="11" class="invalidInput" name="cpf" id="cpf" onchange="Formulario()"
+                required><br>
             <span id="erroCPF" style="display: none;" role="alert">CPF Inválido</span>
         </div>
         <div>
             <label for="possuiveiculo">Possui Veículo</label><br>
-            <select name="possuiveiculo" id="possuiveiculo">
+            <select name="possuiveiculo" id="possuiveiculo" onchange="Formulario()">
                 <option value=" "> </option>
                 <option value="SIM">SIM</option>
                 <option value="NÃO">NÃO</option>
@@ -272,7 +275,7 @@
         </div>
         <div>
             <label for="categoriasHabilitacao">Habilitação</label><br>
-            <select name="categoriasHabilitacao" id="categoriasHabilitacao">
+            <select name="categoriasHabilitacao" id="categoriasHabilitacao" onchange="Formulario()">
                 <option value=" "></option>
                 <option value="Não">Não</option>
                 <option value="A">A</option>
@@ -281,9 +284,9 @@
             </select>
         </div>
     </div>
-    <div><button type="submit" id="enviar" onclick="criarCandidato()">ENVIAR</button></div>
+    <div><button type="submit" id="enviar" onclick="check_form()">ENVIAR</button></div>
 </form>
-
+<div id="botaoExterno"><button onclick="check_form()" type="submit">ENVIAR</button></div>
 <footer>
     <p>Desenvolvido por <a href="https://www.linkedin.com/in/robsonrosajr/" id="linkedin"> Robson Rosa </a> durante o
         Start Tech da Gama Academy</p>
