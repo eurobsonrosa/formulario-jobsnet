@@ -36,15 +36,16 @@
     </ul>
 </header>
 
-<form id="container" onsubmit="return check_form()"> 
-    <!-- method="POST" action="http://localhost:3000/" -->
+<form name="formulario" id="container" onchange="Formulario()">
+    <!-- method="POST" action="http://localhost:5000/registro onsubmit="return check_form()"" -->
 
     <h2 id="dadosPessoais">Dados Pessoais</h2>
 
     <div class="bloco">
         <div>
             <label>Nome Completo </label><span class="preenchimentoObrigatorio">*</span><br>
-            <input type="text" name="nome" id="nome" class="invalidInput" placeholder="Digite seu nome completo" required />
+            <input type="text" name="nome" id="nome" class="invalidInput" placeholder="Digite seu nome completo"
+                required />
         </div>
         <div>
             <label>Cargo Pretendido </label><span class="preenchimentoObrigatorio">*</span><br>
@@ -204,7 +205,8 @@
     <div class="bloco">
         <div id="erroBlocoCEP">
             <label>CEP </label><span class="preenchimentoObrigatorio">*</span><br>
-            <input name="cep" id="cep" type="number" min="8" placeholder="apenas números" class="invalidInput" required><br>
+            <input name="cep" id="cep" type="number" min="8" placeholder="apenas números" class="invalidInput"
+                required><br>
             <span id="erroCEP" style="display: none;" role="alert">CEP inválido</span>
         </div>
         <div>
@@ -269,7 +271,7 @@
             </select>
         </div>
         <div>
-            <label for="categoriaHabilitacao">Habilitação</label><br>
+            <label for="categoriasHabilitacao">Habilitação</label><br>
             <select name="categoriasHabilitacao" id="categoriasHabilitacao">
                 <option value=" "></option>
                 <option value="Não">Não</option>
@@ -279,7 +281,7 @@
             </select>
         </div>
     </div>
-    <div><button type="submit" id="enviar" onclick="check_form()">ENVIAR</button></div>
+    <div><button type="submit" id="enviar" onclick="criarCandidato()">ENVIAR</button></div>
 </form>
 
 <footer>
