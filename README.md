@@ -6,8 +6,8 @@
 
 Para executar o projeto será necessário e recomendavél instalar os seguintes programas:
 
-⋅⋅* [Visual Studio Code](https://code.visualstudio.com/) (recomendável)
-⋅⋅* [Node.js](https://nodejs.org/en/)
+1. [Visual Studio Code](https://code.visualstudio.com/) (recomendável)
+2. [Node.js](https://nodejs.org/en/)
 
 ## Desenvolvimento
 
