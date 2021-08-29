@@ -85,6 +85,6 @@ No GitHubPages está a Landing Page e você pode acessar pelo link abaixo:
 
 ## Agradecimentos
 
-Agradecimentos a [Gama Academy](https://github.com/gamaacademy) pela imersão incrível que foram essas 5 semanas de Start Tech, a turma da [<AmbevTech>](https://ambevtech.com.br/) por financiar esse curso e a galera do #juntando-o-front-e-back por toda colaboração na reta final do projeto XD.
+Agradecimentos a [Gama Academy](https://github.com/gamaacademy) pela imersão incrível que foram essas 5 semanas de Start Tech, a turma da [AmbevTech](https://ambevtech.com.br/) por financiar esse curso e a galera do #juntando-o-front-e-back por toda colaboração na reta final do projeto XD.
 
 
