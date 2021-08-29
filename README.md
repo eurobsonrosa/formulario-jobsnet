@@ -54,9 +54,9 @@ Para dar start no servidor execute o comando:
 $ npm run dev
 ```
 
-Esse comando irá iniciar o servidor através do nodemon e estará disponivél através da porta 5000 e você acessará pelo [http://localhost:5000/]
+Esse comando irá iniciar o servidor através do nodemon e estará disponivél através da porta 5000 e você acessará pelo [http://localhost:5000/](http://localhost:5000)
 
-Para visualizar a documentação dos recursos Web Services REST no navegador da sua preferência navegue para [http://localhost:5000/docs].
+Para visualizar a documentação dos recursos Web Services REST no navegador da sua preferência navegue para [http://localhost:5000/docs](http://localhost:5000/docs).
 
 ### Banco de Dados
 
