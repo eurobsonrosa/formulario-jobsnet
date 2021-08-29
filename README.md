@@ -6,12 +6,12 @@
 
 Para executar o projeto será necessário e recomendavél instalar os seguintes programas:
 
-* [Visual Studio Code](https://code.visualstudio.com/) (recomendável)
+* [Visual Studio Code](https://code.visualstudio.com/)
 * [Node.js](https://nodejs.org/en/)
 
 ## Desenvolvimento
 
-Para iniciar o desenvolvimento, é necessário clonar o projeto do GitHub num diretório de sua preferência:
+Para iniciar o desenvolvimento, é necessário clonar o projeto do GitHub num diretório de sua preferência através do terminal:
 
 ```shell
 cd "diretorio de sua preferencia"
