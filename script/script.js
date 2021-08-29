@@ -126,7 +126,7 @@ const Formulario = () => {
 
 const criarCandidato = async (candidato) => {
 
-    const requisicao = await fetch('http://localhost:5000/registro', {
+    const requisicao = await fetch('https://formulariojobsnet-backend.herokuapp.com/registro', {
         method: "POST",
         headers: {
             'Accept': 'application/json',
