@@ -1,17 +1,17 @@
-# FormulárioJobsNet
+# Formulário JobsNet
 
 ### Este projeto tem como objetivo colocar em prática os conhecimentos obtidos durante o Start Tech da Gama Academy programa de bolsas em parceria com a AmbevTech.
 
 ## Começando
 
-Para executar o projeto será necessário e recomendavél instalar os seguintes programas:
+Para executar o projeto será necessário instalar os seguintes programas:
 
-* [Visual Studio Code](https://code.visualstudio.com/) (recomendável)
+* [Visual Studio Code](https://code.visualstudio.com/)
 * [Node.js](https://nodejs.org/en/)
 
 ## Desenvolvimento
 
-Para iniciar o desenvolvimento, é necessário clonar o projeto do GitHub num diretório de sua preferência:
+Para iniciar o desenvolvimento, é necessário clonar o projeto do GitHub num diretório de sua preferência através do terminal:
 
 ```shell
 cd "diretorio de sua preferencia"
@@ -54,9 +54,9 @@ Para dar start no servidor execute o comando:
 $ npm run dev
 ```
 
-Esse comando irá iniciar o servidor através do nodemon e estará disponivél através da porta 5000 e você acessará pelo [http://localhost:5000/]
+Esse comando irá iniciar o servidor através do nodemon e estará disponivél através da porta 5000 e você acessará pelo [http://localhost:5000/](http://localhost:5000)
 
-Para visualizar a documentação dos recursos Web Services REST no navegador da sua preferência navegue para [http://localhost:5000/docs].
+Para visualizar a documentação dos recursos Web Services REST no navegador da sua preferência navegue para [http://localhost:5000/docs](http://localhost:5000/docs).
 
 ### Banco de Dados
 
