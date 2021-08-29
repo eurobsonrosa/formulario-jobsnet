@@ -156,12 +156,12 @@ function check_form() {
     let cidade = document.getElementById('cidade').value;
     let estado = document.getElementById('estado').value;
     let celular = document.getElementById('celular').value;
-    let email = document.getElementById('email').value.mata;
+    let email = document.getElementById('email').value;
     let identidade = document.getElementById('identidade').value;
 
     if (nome == "" || cargo == "" || dia == "" || mes == "" || ano == "" || cep == "" || endereco == ""
         || numResidencia == "" || bairro == "" || cidade == "" || estado == "" || celular == "" ||
-        email == false || identidade == "" || validacaoCPF() == false) {
+        .length < 4 || identidade == "" || validacaoCPF() == false) {
         alert('Por favor, preencha todos os campos corretamente.');
     } else {
         criarCandidato();
