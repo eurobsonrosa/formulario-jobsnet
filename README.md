@@ -4,7 +4,7 @@
 
 ## Começando
 
-Para executar o projeto será necessário e recomendavél instalar os seguintes programas:
+Para executar o projeto será necessário instalar os seguintes programas:
 
 * [Visual Studio Code](https://code.visualstudio.com/)
 * [Node.js](https://nodejs.org/en/)
