@@ -9,7 +9,7 @@ const cors =  require('cors');
 
 const app = express();
 
-mongoose.connect(`mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@candidatos.rybbm.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`, {
+mongoose.connect(process.env.MONGO_URL, {
     useNewUrlParser: true,
     useUnifiedTopology: true
 })
