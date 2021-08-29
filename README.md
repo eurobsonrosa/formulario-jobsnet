@@ -6,8 +6,8 @@
 
 Para executar o projeto será necessário e recomendavél instalar os seguintes programas:
 
---* [Visual Studio Code](https://code.visualstudio.com/) (recomendável)
---* [Node.js](https://nodejs.org/en/)
+⋅⋅* [Visual Studio Code](https://code.visualstudio.com/) (recomendável)
+⋅⋅* [Node.js](https://nodejs.org/en/)
 
 ## Desenvolvimento
 
@@ -74,13 +74,13 @@ Para fazer Deploy e publicação utilizei o [Heroku](https://www.heroku.com/) e 
 No Heroku fiz deploy da pasta server onde está o backend e em produção no momento. Para verificar acesse os links abaixo:
 
 #### Verificar conexão
---* https://formulariojobsnet-backend.herokuapp.com/
+⋅⋅* https://formulariojobsnet-backend.herokuapp.com/
 #### Acessar a API do formulário
---* https://formulariojobsnet-backend.herokuapp.com/docs
+⋅⋅* https://formulariojobsnet-backend.herokuapp.com/docs
 
 No GitHubPages está a Landing Page e você pode acessar pelo link abaixo:
 
---* https://eurobsonrosa.github.io/formulario-jobsnet/
+⋅⋅* https://eurobsonrosa.github.io/formulario-jobsnet/
 
 
 ## Agradecimentos
