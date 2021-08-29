@@ -36,7 +36,7 @@
     </ul>
 </header>
 
-<form name="formulario" id="container">
+<form method="POST" name="formulario" id="container">
     <!-- onsubmit="return check_form()"" -->
 
     <h2 id="dadosPessoais">Dados Pessoais</h2>
@@ -284,7 +284,7 @@
             </select>
         </div>
     </div>
-    <div><button type="submit" id="enviar" onclick="check_form()">ENVIAR</button></div>
+    <div><button type="submit" id="enviar" onclick="check_form(); return false;">ENVIAR</button></div>
 </form>
 <footer>
     <p>Desenvolvido por <a href="https://www.linkedin.com/in/robsonrosajr/" id="linkedin"> Robson Rosa </a> durante o
